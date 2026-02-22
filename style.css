@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --bg-color: rgb(69, 69, 69);
+    --bg-color-2: #28BFD0;
+    --text-color: white;
+    --color-1: #008fad;
+    --color-2: #d94498;
+    --color-3: #beda73;
+    --color-4: #89c201;
+
+    color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #FFFFFF;
+        --text-color: black;
+
+        color-scheme: light;
+    }
+}
+
+html {
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    height: 100%;
+}
+
+header, footer {
+    background-color: var(--color-1);
+    padding: 2rem;
+    max-width: 100vw;
+}
+header {
+    box-shadow: 0 .2rem .5rem 0 rgba(0, 0, 0, 0.5);
+}
+footer {
+    box-shadow: 0 0 .5rem .2rem rgba(0, 0, 0, 0.5);
+}
+footer form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: .5rem;
+}
+
+input {
+    background-color: var(--bg-color);
+    border: none;
+    padding: 1em 2em;
+    min-width: 0;
+}
+
+#nachricht_input {
+    grid-column: span 2;
+    height: 4lh;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+main {
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100vw;
+    height: fit-content;
+}
+
+.nachricht {
+    padding: 2rem;
+    background-color: var(--color-2);
+    line-height: 1.6em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 1rem;
+}
+.nachricht .name {
+    text-wrap: nowrap;
+}
+.nachricht .content {
+    grid-column: 1/-1;
+}
+.nachricht .date {
+    margin-top: auto;
+}
+
+.color1 {
+    background-color: var(--bg-color-2);
+}
+.color2 {
+    background-color: var(--color-2);
+}
+.color3 {
+    background-color: var(--color-4);
+}
+
+button {
+    background-color: var(--bg-color-2);
+    border: none;
+    padding: 1em 2em;
+}
+
+@media only screen and (max-width: 600px) {
+    footer form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+    }
+}

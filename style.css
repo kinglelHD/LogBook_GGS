@@ -76,6 +76,7 @@ main {
     gap: 1rem;
     flex: 1 1 250px;
     height: fit-content;
+    max-width: 100%;
 }
 .nachricht.edit {
     outline: .25em solid var(--text-color);
@@ -100,6 +101,7 @@ main {
     font-size: 1.6rem;
     overflow: hidden;
     min-width: 200px;
+    word-wrap: break-word;
 }
 .nachricht .name {
     text-wrap: nowrap;
@@ -107,6 +109,8 @@ main {
 }
 .nachricht .content {
     grid-column: 1/-1;
+    word-break: break-all;
+    width: 100%;
 }
 .nachricht .date {
     margin-top: auto;

@@ -192,6 +192,7 @@ class Message{
 }
 
 new Message('Information', 'DD', 'Dieses Gästebuch ist ein Spaßprojekt von „DD“. Hier kann man hochladen was man möchte und sich die Beiträge von anderen Personen angucken. Bitte KEINE personenbezogenen Daten veröffentlichen! „DD“ wünscht viel Spaß beim lesen und schreiben 😘.', false, false, null, 2, 'Fri, 20 Feb 2026')
+new Message('Rätsel', 'DD', 'aHR0cHM6Ly9nZ3NnYWVzdGVidWNoLm5ldGxpZnkuYXBwL2dlaGVpbQ==', false, false, null, 1, 'Fri, 20 Feb 2026')
 
 fetch(`/.netlify/functions/message?uuid=${uuid}`, {
     method: 'GET',
@@ -202,8 +203,6 @@ fetch(`/.netlify/functions/message?uuid=${uuid}`, {
 .then(res => res.json())
 .then(data => {
     data.forEach(message => {
-        console.log(message);
-        
         new Message(
             message.heading,
             message.name,

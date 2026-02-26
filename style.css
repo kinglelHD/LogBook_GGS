@@ -76,7 +76,6 @@ main {
     gap: 1rem;
     flex: 1 1 250px;
     height: fit-content;
-    max-width: min(50%, 1000px);
 }
 .nachricht.edit {
     outline: .25em solid var(--text-color);

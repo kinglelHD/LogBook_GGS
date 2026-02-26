@@ -1,0 +1,25 @@
+{
+  "name": "logbook_ggs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "devStart": "netlify dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kinglelHD/LogBook_GGS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kinglelHD/LogBook_GGS/issues"
+  },
+  "homepage": "https://github.com/kinglelHD/LogBook_GGS#readme",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "@netlify/neon": "^0.1.2"
+  }
+}

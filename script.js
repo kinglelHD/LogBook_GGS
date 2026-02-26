@@ -187,6 +187,11 @@ class Message{
                 uuid: uuid,
                 color: this.color
             })
+        }).then(res => res.json())
+        .then(data => {
+            if (method == 'POST') {
+                this.id = data.id
+            }
         })
     }
 }
